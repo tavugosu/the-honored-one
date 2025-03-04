@@ -1,0 +1,17 @@
+.livebackground-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.livebackground-container video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  object-position: center;
+  background-color: black;
+}
