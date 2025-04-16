@@ -8,6 +8,8 @@ interface LiveBackgroundProps {
 
 const LiveBackground: Component<LiveBackgroundProps> = (props) => {
   const [isMuted, setIsMuted] = createSignal(props.initialMuted ?? true);
+  const sukunaTheme = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1710822888&color=%23ff5500&auto_play=true&visual=true&loop=true";
+  const gojoTheme = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1637473239&color=%23ff5500&auto_play=true&visual=true&loop=true";
 
   return (
     <Show when={props.videoPath} fallback={<div>404 - Video Not Found</div>}>
@@ -29,7 +31,7 @@ const LiveBackground: Component<LiveBackgroundProps> = (props) => {
         width="100%"
         height="300"
         allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1637473239&color=%23ff5500&auto_play=true&visual=true&loop=true"
+        src={sukunaTheme}
       ></iframe>
     </Show>
   );
